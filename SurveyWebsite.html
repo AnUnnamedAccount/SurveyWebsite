@@ -8,20 +8,30 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;
+    height: 1000px;
     }
     
             .form {
         background-color: rgba(255, 0, 0, 0.45);
         border-radius: 5px;
-        width: 2000px;
+        width: 650px;
     }
     
             .head {
         text-align: center;
         background-color: red;
         border-radius: 5px;
-        width: 2000px;
+        width: 650px;
+    }
+
+            .textinput{
+        width: 125px;
+        height: 40px;
+    }
+
+            textarea{
+        height: 120px;
+        width: 200px;
     }
         </style>
     </head>
@@ -38,6 +48,53 @@
                 <br>
                 <label id="email-label" for="email">Email:<br></label>
                 <input type="text" name="email" id="email" placeholder="Enter your email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                <br>
+                <label id="age-label" for="age">Age: (optional)<br></label>
+                <input type="number" name="age" id="age" placeholder="Enter your age" min="0" required="false"/>
+                <br>
+                <label id="people-label" for="people">How many are dining?:<br></label>
+                <select id="dropdown" name="people" required="true">
+                    <option disabled selected value> Select group size
+                    </option>
+                    <option value="1"> Solo (1 person)
+                    </option>
+                    <option value="2"> Duo (2 people)
+                    </option>
+                    <option value="3"> Trio (3 people)
+                    </option>
+                    <option value="4"> Squad (4 people)
+                    </option>
+                    <option value="+4"> More (+4 people)
+                    </option>
+                    <option value="0"> Prefer not to say 
+                    </option>
+                </select>
+                <br>
+                <label id="rec-label" for="rec">Would you recommend our services to a friend?<br></label>
+                <input id="rec" name="rec" value="defnot" type="radio">Definitely not </input>
+                <br>
+                <input id="rec" name="rec" value="probnot" type="radio">Probably not </input>
+                <br>
+                <input id="rec" name="rec" value="probyes" type="radio" checked> Maybe </input>
+                <br>
+                <input id="rec" name="rec" value="probnot" type="radio">Probably yes </input>
+                <br>
+                <input id="rec" name="rec" value="defyes" type="radio">Definitely yes </input>
+                <br>
+                <label id="like-label" for="like">What did you like about our restaurant?: (check all that apply)<br></label>
+                <input id="like" name="like" required="true" type="checkbox" value="Food"> The Food </input>
+                <br>
+                <input id="like" name="like" required="true" type="checkbox" value="Ambience"> The Ambience </input>
+                <br>
+                <input id="like" name="like" required="true" type="checkbox" value="services"> The Services </input>
+                <br>
+                <input id="like" name="like" required="true" type="checkbox" value="Menu"> The Menu </input>
+                <br>
+                <input id="like" name="like" required="true" type="checkbox" value="Prices&Offers"> The Prices and Offers </input>
+                <br>
+                <label id="comment-label" for="comment">Comment: <br></label>
+                <textarea id="comment" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div> 
             </div>
         </main>
     </body>
